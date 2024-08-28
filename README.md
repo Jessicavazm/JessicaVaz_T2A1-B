@@ -44,7 +44,7 @@ In this scenario, the order is in inverse, which means the loops will interact o
         # Each run ensures larger numbers are placed towards the end of the list 
         for i in range(n):
 
-            # Inner loop runs from the first element to the last element minus the ordered elements
+            # Inner loop runs from the first to last element minus the ordered elements
             for j in range(0, n-i-1):
                 # Compares the actual element with the next element (adjacent pairs)
                 # If the actual element is greater than actual, it swap places
@@ -63,61 +63,61 @@ In this scenario, the order is in inverse, which means the loops will interact o
 
 ### Step-by-Step Sorting Process:
 
-Pass 1:
-arr = [33, 6, 4, 3, 2, 1]
-Compare 33 and 6: Since 33 > 6, swap them.
-List after swap: [6, 33, 4, 3, 2, 1]
-Compare 33 and 4: Since 33 > 4, swap them.
-List after swap: [6, 4, 33, 3, 2, 1]
-Compare 33 and 3: Since 33 > 3, swap them.
-List after swap: [6, 4, 3, 33, 2, 1]
-Compare 33 and 2: Since 33 > 2, swap them.
-List after swap: [6, 4, 3, 2, 33, 1]
-Compare 33 and 1: Since 33 > 1, swap them.
-List after swap: [6, 4, 3, 2, 1, 33]
-Result after Pass 1: [6, 4, 3, 2, 1, 33]
-The largest element, 33, has "bubbled" to its correct position at the end.
+    Pass 1:
+    arr = [33, 6, 4, 3, 2, 1]
+    Compare 33 and 6: Since 33 > 6, swap them.
+    List after swap: [6, 33, 4, 3, 2, 1]
+    Compare 33 and 4: Since 33 > 4, swap them.
+    List after swap: [6, 4, 33, 3, 2, 1]
+    Compare 33 and 3: Since 33 > 3, swap them.
+    List after swap: [6, 4, 3, 33, 2, 1]
+    Compare 33 and 2: Since 33 > 2, swap them.
+    List after swap: [6, 4, 3, 2, 33, 1]
+    Compare 33 and 1: Since 33 > 1, swap them.
+    List after swap: [6, 4, 3, 2, 1, 33]
+    Result after Pass 1: [6, 4, 3, 2, 1, 33]
+    The largest element, 33, has "bubbled" to its correct position at the end.
 
-Pass 2:
-Compare 6 and 4: Since 6 > 4, swap them.
-List after swap: [4, 6, 3, 2, 1, 33]
-Compare 6 and 3: Since 6 > 3, swap them.
-List after swap: [4, 3, 6, 2, 1, 33]
-Compare 6 and 2: Since 6 > 2, swap them.
-List after swap: [4, 3, 2, 6, 1, 33]
-Compare 6 and 1: Since 6 > 1, swap them.
-List after swap: [4, 3, 2, 1, 6, 33]
-Result after Pass 2: [4, 3, 2, 1, 6, 33]
-The second largest element, 6, is now in its correct position, just before 33.
+    Pass 2:
+    Compare 6 and 4: Since 6 > 4, swap them.
+    List after swap: [4, 6, 3, 2, 1, 33]
+    Compare 6 and 3: Since 6 > 3, swap them.
+    List after swap: [4, 3, 6, 2, 1, 33]
+    Compare 6 and 2: Since 6 > 2, swap them.
+    List after swap: [4, 3, 2, 6, 1, 33]
+    Compare 6 and 1: Since 6 > 1, swap them.
+    List after swap: [4, 3, 2, 1, 6, 33]
+    Result after Pass 2: [4, 3, 2, 1, 6, 33]
+    The second largest element, 6, is now in its correct position, just before 33.
 
-Pass 3:
-Compare 4 and 3: Since 4 > 3, swap them.
-List after swap: [3, 4, 2, 1, 6, 33]
-Compare 4 and 2: Since 4 > 2, swap them.
-List after swap: [3, 2, 4, 1, 6, 33]
-Compare 4 and 1: Since 4 > 1, swap them.
-List after swap: [3, 2, 1, 4, 6, 33]
-Result after Pass 3: [3, 2, 1, 4, 6, 33]
-The third largest element, 4, is now in its correct position.
+    Pass 3:
+    Compare 4 and 3: Since 4 > 3, swap them.
+    List after swap: [3, 4, 2, 1, 6, 33]
+    Compare 4 and 2: Since 4 > 2, swap them.
+    List after swap: [3, 2, 4, 1, 6, 33]
+    Compare 4 and 1: Since 4 > 1, swap them.
+    List after swap: [3, 2, 1, 4, 6, 33]
+    Result after Pass 3: [3, 2, 1, 4, 6, 33]
+    The third largest element, 4, is now in its correct position.
 
-Pass 4:
-Compare 3 and 2: Since 3 > 2, swap them.
-List after swap: [2, 3, 1, 4, 6, 33]
-Compare 3 and 1: Since 3 > 1, swap them.
-List after swap: [2, 1, 3, 4, 6, 33]
-Result after Pass 4: [2, 1, 3, 4, 6, 33]
-The fourth largest element, 3, is now in its correct position.
+    Pass 4:
+    Compare 3 and 2: Since 3 > 2, swap them.
+    List after swap: [2, 3, 1, 4, 6, 33]
+    Compare 3 and 1: Since 3 > 1, swap them.
+    List after swap: [2, 1, 3, 4, 6, 33]
+    Result after Pass 4: [2, 1, 3, 4, 6, 33]
+    The fourth largest element, 3, is now in its correct position.
 
-Pass 5:
-Compare 2 and 1: Since 2 > 1, swap them.
-List after swap: [1, 2, 3, 4, 6, 33]
-Result after Pass 5: [1, 2, 3, 4, 6, 33]
-The fifth largest element, 2, is now in its correct position.
+    Pass 5:
+    Compare 2 and 1: Since 2 > 1, swap them.
+    List after swap: [1, 2, 3, 4, 6, 33]
+    Result after Pass 5: [1, 2, 3, 4, 6, 33]
+    The fifth largest element, 2, is now in its correct position.
 
-Pass 6:
-No comparisons are needed since only one element is left unsorted, and the list is now fully sorted.
-Final Sorted List:
-[1, 2, 3, 4, 6, 33]
+    Pass 6:
+    No comparisons are needed since only one element is left unsorted, and the list is now fully sorted.
+    Final Sorted List:
+    [1, 2, 3, 4, 6, 33]
 
 
 ### Average case scenario
