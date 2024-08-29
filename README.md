@@ -127,46 +127,67 @@ These algorithms are used to search for a specific key (value) in a given list.
 
 Examples of Searching algorithms:
 
-- Binary search: 
-    - Description: It compares the element in the middle of the sorted array to a target element, if the target value matches the element, it returns the element's index otherwise if target number is smaller than element, it discards the upper side and the search continues in the lower side, if the target value is bigger, the search continues in the upper half. This process narrows down the search by half every time it gets performed until the target value is found.
-    - Performance: Efficient for sorted arrays and large lists. This algorithm can't be used in unordered lists.
-    - Complexity: Worse case scenario: O(log n)  
+- <b>Binary search</b>:
+
+    - <b>Description</b>: It compares the element in the middle of the sorted array to a target element, if the target value matches the element, it returns the element's index otherwise if target number is smaller than element, it discards the upper side and the search continues in the lower side, if the target value is bigger, the search continues in the upper half. This process narrows down the search by half every time it gets performed until the target value is found.
+
+    - <b>Performance</b>: Efficient for sorted arrays and large lists. This algorithm can't be used in unordered lists.
+
+    - <b>Complexity</b>: Worse case scenario: O(log n)  
+
 
 - Linear search: 
-    - Description: Checks each element sequentially to find the specific value, if no element is found, the algorithm describes element is not present.
-    - Performance: Easy to implement, and efficient for small and unordered lists.
-    - Complexity: Worse case scenario: O(n) 
+    - <b>Description</b>: Checks each element sequentially to find the specific value, if no element is found, the algorithm describes element is not present.
+
+    - <b>Performance</b>: Easy to implement, and efficient for small and unordered lists.
+
+    - <b>Complexity</b>: Worse case scenario: O(n) 
 
 #### Sorting Algorithms
+
 Sorting algorithm is the number of steps it takes to put a list in a specific order, example: smallest to largest. The main goal of this algorithm is to organise data so data can be easily read and searched through. 
 
-Examples of Sorting algorithms: 
+#### Examples of Sorting algorithms: 
 
-- Bubble Sort: 
-    - Description: Compare adjacent elements and swap them to achieve order.
-    - Performance: Inefficient for large datasets, for simple tasks performance can be ok. 
-    - Complexity: Worst case scenario: O(n^2)
+- <b>Bubble Sort</b>: 
 
-- Insertion sort:
-    - Description: Creates the sorted array by swapping elements into the correct places, one by one.
-    - Performance: Efficient for small datasets or nearly sorted arrays. 
-    - Complexity: Worst case scenario: O(n^2)
+    - <b>Description</b>: Compare adjacent elements and swap them to achieve order.
 
-- Merge sort: 
-    - Description: Divide-and-conquer algorithm, it divide elements into 2 halves, sorts each half and them merge both sorted halves.
-    - Performance: Stable sorting and efficient for large datasets. 
-    - Complexity: Worse case scenario: O(log n)
+    - <b>Performance</b>: Inefficient for large datasets, for simple tasks performance can be ok. 
 
-- Selection sort: 
-    - Description: Finds the smallest or greatest element and move it to the end of arranged array. Process keeps repeating until array is completely sorted.
-    - Performance: Inefficient for large datasets, easy to implement. 
-    - Complexity: Worst case scenario: O(n^2)
+    - <b>Complexity</b>: Worst case scenario: O(n^2)
 
-- Quick sort: 
-    - Description: Divide-and-conquer algorithm, algorithm chooses the pivot element and divides array into two halves, example: Elements < pivot and Elements > pivot. The same process is performed again with 
-    left and right halves until all elements are ordered.
-    - Performance: Efficient for large datasets. 
-    - Complexity: Worst case scenario: O(n^2)
+- <b>Insertion sort</b>:
+
+    - <b>Description</b>: Creates the sorted array by swapping elements into the correct places, one by one.
+
+    - <b>Performance</b>: Efficient for small datasets or nearly sorted arrays.
+
+    - <b>Complexity</b>: Worst case scenario: O(n^2)
+
+- <b>Merge sort</b>: 
+
+    - <b>Description</b>: It's a divide-and-conquer algorithm. Merge sort divides elements into 2 halves, sorts each half and them merge both sorted halves.
+
+    - <b>Performance</b>: Stable sorting and efficient for large datasets. 
+
+    - <b>Complexity</b>: Worse case scenario: O(log n)
+
+- <b>Selection sort</b>: 
+
+    - <b>Description</b>: Finds the smallest or greatest element and move it to the end of arranged array. Process keeps repeating until array is completely sorted.
+
+    - <b>Performance</b>: Inefficient for large datasets, easy to implement. 
+
+    - <b>Complexity</b>: Worst case scenario: O(n^2)
+
+- <b>Quick sort</b>: 
+    
+    - <b>Description</b>: It's a divide-and-conquer algorithm. Quick sort algorithm chooses the pivot element and divides array into two halves, example: elements less than pivot and elements greater than pivot. The same process is performed again with left and right halves until all elements are ordered.
+
+    - <b>Performance</b>: Efficient for large datasets. 
+
+    - <b>Complexity</b>: Worst case scenario: O(n^2)
 
 
 #### Screen shoots that describes complexity for sorting algorithms and common 
