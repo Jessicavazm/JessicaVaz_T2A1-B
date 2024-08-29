@@ -147,7 +147,7 @@ Examples of Searching algorithms:
 
 Sorting algorithm is the number of steps it takes to put a list in a specific order, example: smallest to largest. The main goal of this algorithm is to organise data so data can be easily read and searched through. 
 
-#### Examples of Sorting algorithms: 
+Examples of Sorting algorithms: 
 
 - <b>Bubble Sort</b>: 
 
@@ -167,7 +167,7 @@ Sorting algorithm is the number of steps it takes to put a list in a specific or
 
 - <b>Merge sort</b>: 
 
-    - <b>Description</b>: It's a divide-and-conquer algorithm. Merge sort divides elements into 2 halves, sorts each half and them merge both sorted halves.
+    - <b>Description</b>: It's a divide-and-conquer algorithm. Merge sort divides array into 2 halves, sorts each half first and then merge both sorted halves back together.
 
     - <b>Performance</b>: Stable sorting and efficient for large datasets. 
 
@@ -192,9 +192,9 @@ Sorting algorithm is the number of steps it takes to put a list in a specific or
 
 #### Screen shoots that describes complexity for sorting algorithms and common 
 
-![Graph demonstrating BIG complexity types](./ComplexityBIG0.png)
+![Graph demonstrating BIG complexity types, taken from geeksforgeeks](./Screenshots/ComplexityBIG0.png)
 
-![List demonstrating Sorting algorithms complexity scenarios](./SortingAlg.png)
+![List demonstrating Sorting algorithms complexity scenarios, taken from BigOcheatsheet](./Screenshots/SortingAlg.png)
 ‌
 ‌Rowell, E. (2019). Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!). [online] Bigocheatsheet.com. Available at: https://www.bigocheatsheet.com/.
 
@@ -348,23 +348,89 @@ Using the `swap` Boolean flag, the loops are able to terminate earlier if list i
     print("Sorted list:", arr)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 References:
 
 Notes taken from ED/Canvas and past Zoom classes.
 
 GeeksforGeeks. (2014). Bubble Sort Algorithm. [online] Available at: https://www.geeksforgeeks.org/bubble-sort-algorithm/.
+
+
+# Q2
+
+## Merge Sort - O(n log n)
+
+Merge sort is a algorithm that follows the divide-and-conquer approach. When compared to the Bubble sorting algorithm example given in the question number 01 and other common sorting algorithms, Merge sort is more reliable and has a guaranteed worse case scenario of O(n log n). This complexity is achieve because the algorithm always divide the initial input data into halves. Some other advantages of Merge include being a stable algorithm and being easy to understand and implement.
+
+Merge works by dividing the array into two halves and sorting each half first. Once the halves are sorted, it merges halves back together. The initial order doesn't play a part in Merge sort.
+
+Since the algorithm divides and arrange each sub-array separately, it requires more memory to store arranged sub-arrays before merging them together. In case of larger datasets or environments with memory restrictions, this can be a disadvantage and another option would be Quick Sort requires less extra memory compared to Merge sort. 
+
+
+#### Bellow is an illustration how Merge Sort works
+
+![Merge example illustration taken from geeksforgeeks](./Screenshots/merge.png)
+
+Where to use Merge sort:
+- Large databases
+- External sorting (large amount of data in external memory)
+- Inversion sorting (indicates how far the array is from being ordered)
+- To find Union and Intersection of two sorted arrays
+- Sort linked lists
+
+
+#### Example of a Merge sort function
+
+    def merge_sort(arr):
+        # Array with one or less elements
+        if len(arr) <= 1:
+            return arr
+        
+        # Divide the array into two halves - O(log n) Complexity
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+        
+        # Sort arrays and store values in variables 
+        left_sorted = merge_sort(left_half)
+        right_sorted = merge_sort(right_half)
+        
+        # Merge the sorted halves
+        return merge(left_sorted, right_sorted)
+
+
+    def merge(left, right):
+        sorted_arr = []
+        i = j = 0
+        
+        # Compare the elements of the left and right halves and merge them
+        # O(n) Complexity
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                sorted_arr.append(left[i])
+                i += 1
+            else:
+                sorted_arr.append(right[j])
+                j += 1
+        
+        # If there are remaining elements in the left half, add them to the sorted array
+        sorted_arr.extend(left[i:])
+        
+        # If there are remaining elements in the right half, add them to the sorted array
+        sorted_arr.extend(right[j:])
+        
+        return sorted_arr
+
+    # Example usage:
+    arr = [38, 27, 43, 3, 9, 82, 10]
+    sorted_arr = merge_sort(arr)
+    print("Sorted array:", sorted_arr)
+
+
+
+References:
+
+GeeksforGeeks (2018). Merge Sort - GeeksforGeeks. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/merge-sort/.
+
+‌
 
 
