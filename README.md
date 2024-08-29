@@ -2,31 +2,31 @@
 
 ## Big 0 Notation
 
-`Big O notation` or `Order of` was first introduced by German mathematician Paul Bachmann back in 1894. It's part of a family of Bachmann–Landau notations. The capital letter `O` means `Order of Approximation`.
+"Big O notation" or "Order of" was first introduced by German mathematician Paul Bachmann back in 1894. It's part of a family of Bachmann–Landau notations. The capital letter `O` means "Order of Approximation".
 
-Big O is used to describe the time complexity and efficiency of algorithms. This notation puts the number of steps in the spotlight and the hardware is not taken into consideration. Big O describes the upper bond of an algorithm time or space complexity, this means it generally describes the worse case scenario. 
+Big O is used to describe the time complexity and efficiency of algorithms. This notation puts the number of steps in the spotlight and the hardware is not taken into consideration. Big O notation describes the upper bound of an algorithm's time or space complexity, this means Big O generally describes the worse case scenario.
 
-When calculating the Big O notation, the focus is on the `Dominant term` which is the term that grows the fastest as the input size gets bigger, this will determine the complexity. When describing the complexity we ignore the smaller terms and the constant and we describe the dominant term. 
+When calculating Big O notation, the focus is on the "Dominant term" which is the term that grows the fastest as the input size gets larger, this will determine the complexity of an algorithm. When describing the complexity we ignore the smaller terms and the constant and we describe the dominant term. 
 
-Big O is a very powerful tool for developers because it helps to see the function's efficiency as the data input grows, it gives developers an idea how determined function will perform with different data sizes. Understanding the Big O, gives the developers the option to choose the best performing algorithm to solve their problems and complete a function.
+Big O is a very powerful tool for developers because it helps to see the function's efficiency as the data input grows, it gives developers an idea how a certain function will perform with different data sizes. Understanding the Big O, gives the developers the option to choose the best performing algorithm to solve their problems and complete a function.
 
 
-## Types of complexity:
+### Types of complexity:
 
-### O(1) Constant
+### O(1) - Constant
 
-As the data grows, the number of steps stays the same, no matter how small or big the data is. In this algorithm a value will be selected and return. In the example bellow, no matter how many items are in this array, the function with return the element with the index value of 0. O(1) has the least complexity.
+As the data grows, the number of steps stays the same, no matter how small or big the data is. In this algorithm a value will be selected and return. In the example bellow, no matter how many items are in this array, the function with return the element with the index value of zero. O(1) has the least complexity.
 
-#### Example of Constant time complexity algorithm
+### Example of Constant time complexity algorithm
 
     def get_first_element(arr):
     return arr[0]
 
-### O(log n) Logarithmic
+### O(log n) - Logarithmic
 
 As the data grows large, the Logarithmic complexity becomes smaller relative to the growth when compared to Linear and Quadratic complexities. 
 
-This type of algorithm is usually found in algorithms that usually divides data into 2 halves such as Binary search. Division is usually present in O(log n).
+This type of complexity is commonly seen in algorithms that divide data into two halves, such as Binary Search. Such division typically results in O(log n) complexity.
 
 O(log n) is more complex than O(1) but less complex than polynomials O(n) and O(n^2).
 
@@ -57,9 +57,9 @@ O(log n) is more complex than O(1) but less complex than polynomials O(n) and O(
     print(binary_search_with_steps([1, 5, 8, 12, 20, 21, 35], 8))
 
 
-### O(n) Linear
+### O(n) - Linear
 
-As the size of the dataset increases, the time complexity grows at the same rate. In the worst case, the algorithm requires a number of steps equal to the number of elements in the input dataset.
+As the size of the dataset increases, the time complexity grows at the same rate. In the worst case scenario, the algorithm requires a number of steps equal to the number of elements in the input dataset.
 
 #### Function that counts the occurrences of a value in an input dataset
 
@@ -87,9 +87,9 @@ Typically involves nested loops, where the time complexity increases quadratical
                     arr[j], arr[j+1] = arr[j+1], arr[j]
         return arr
 
-    print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))
+    print(bubble_sort([64, 34, 24, 12, 22, 13, 95]))
 
-    Output : [11, 12, 22, 25, 34, 64, 90]
+    Output : [12, 13, 22, 24, 34, 64, 95]
 
 ### O(2n) Exponential
 
@@ -103,7 +103,7 @@ This algorithm grows the quickest compared to the past examples given above. Fac
     Factorial: 10! (where n = 10!)
     10x 9x 8x 7x 6x 5x 4x 3x 2x 1 = 3,628,800
 
-Exponential algorithm steps doubles with addition to dataset. This is common in recursing algorithms that call themselves multiple times. Exponential algorithms should be avoided because it has very high complexity and uses a lot of memory.
+Exponential algorithm doubles with dataset addition. This is common in recursing algorithms that call themselves multiple times. Exponential algorithms should be avoided because it has very high complexity and uses a lot of memory.
 
 #### Exponential Fibonacci example 
 
@@ -129,15 +129,15 @@ Examples of Searching algorithms:
 
 - <b>Binary search</b>:
 
-    - <b>Description</b>: It compares the element in the middle of the sorted array to a target element, if the target value matches the element, it returns the element's index otherwise if target number is smaller than element, it discards the upper side and the search continues in the lower side, if the target value is bigger, the search continues in the upper half. This process narrows down the search by half every time it gets performed until the target value is found.
+    - <b>Description</b>: It compares the element in the middle of the sorted array to the target value. If the target matches the element, it returns the index of that element. If the target is smaller than the element, the algorithm discards the upper half and continues the search in the lower half. Conversely, if the target is larger, the search continues in the upper half. This process repeatedly narrows down the search range by half until the target value is found.
 
     - <b>Performance</b>: Efficient for sorted arrays and large lists. This algorithm can't be used in unordered lists.
 
     - <b>Complexity</b>: Worse case scenario: O(log n)  
 
 
-- Linear search: 
-    - <b>Description</b>: Checks each element sequentially to find the specific value, if no element is found, the algorithm describes element is not present.
+- <b>Linear search</b>: 
+    - <b>Description</b>: Checks each element sequentially to find the specific value, if no element is found, the algorithm concludes that element is not present.
 
     - <b>Performance</b>: Easy to implement, and efficient for small and unordered lists.
 
@@ -145,9 +145,9 @@ Examples of Searching algorithms:
 
 #### Sorting Algorithms
 
-Sorting algorithm is the number of steps it takes to put a list in a specific order, example: smallest to largest. The main goal of this algorithm is to organise data so data can be easily read and searched through. 
+Sorting algorithm is the number of steps it takes to put a list in specific order, example: smallest to largest. The main goal of this algorithm is to organise data so data can be easily read and searched through. 
 
-Examples of Sorting algorithms: 
+Examples of Sorting Algorithms: 
 
 - <b>Bubble Sort</b>: 
 
@@ -159,7 +159,7 @@ Examples of Sorting algorithms:
 
 - <b>Insertion sort</b>:
 
-    - <b>Description</b>: Creates the sorted array by swapping elements into the correct places, one by one.
+    - <b>Description</b>: Sorts the array by swapping elements into the correct places, one by one.
 
     - <b>Performance</b>: Efficient for small datasets or nearly sorted arrays.
 
@@ -167,7 +167,7 @@ Examples of Sorting algorithms:
 
 - <b>Merge sort</b>: 
 
-    - <b>Description</b>: It's a divide-and-conquer algorithm. Merge sort divides array into 2 halves, sorts each half first and then merge both sorted halves back together.
+    - <b>Description</b>: It is a divide-and-conquer algorithm. The Merge Sort algorithm divides the array into two halves, sorts each half, and then merges the two sorted halves back together.
 
     - <b>Performance</b>: Stable sorting and efficient for large datasets. 
 
@@ -175,7 +175,7 @@ Examples of Sorting algorithms:
 
 - <b>Selection sort</b>: 
 
-    - <b>Description</b>: Finds the smallest or greatest element and move it to the end of arranged array. Process keeps repeating until array is completely sorted.
+    - <b>Description</b>: It finds the smallest or largest element and moves it to the end of the sorted portion of the array. This process repeats until the entire array is sorted.
 
     - <b>Performance</b>: Inefficient for large datasets, easy to implement. 
 
@@ -183,7 +183,7 @@ Examples of Sorting algorithms:
 
 - <b>Quick sort</b>: 
     
-    - <b>Description</b>: It's a divide-and-conquer algorithm. Quick sort algorithm chooses the pivot element and divides array into two halves, example: elements less than pivot and elements greater than pivot. The same process is performed again with left and right halves until all elements are ordered.
+    - <b>Description</b>: It is a divide-and-conquer algorithm. Quick sort Algorithm chooses the pivot element and divides the array into two halves, example: elements less than pivot and elements greater than the pivot. The same process is performed again with left and right halves until all elements are ordered.
 
     - <b>Performance</b>: Efficient for large datasets. 
 
@@ -192,7 +192,7 @@ Examples of Sorting algorithms:
 
 #### Screen shoots that describes complexity for sorting algorithms and common 
 
-![Graph demonstrating BIG complexity types, taken from geeksforgeeks](./Screenshots/ComplexityBIG0.png)
+![Graph demonstrating BIG complexity types, taken from medium](./Screenshots/complexityBIGO.png)
 
 ![List demonstrating Sorting algorithms complexity scenarios, taken from BigOcheatsheet](./Screenshots/SortingAlg.png)
 ‌
@@ -202,26 +202,31 @@ geeksforgeeks (2018). Analysis of Algorithms | Big-O analysis - GeeksforGeeks. [
 
 Huang, S. (2020). What is Big O Notation Explained: Space and Time Complexity. [online] freeCodeCamp.org. Available at: https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/.
 
-# Q1 
+Peng, Y. (2023). Time Complexity: Everything You Need to Know! - Ying Peng - Medium. [online] Medium. Available at: https://medium.com/@yingpeng0221/time-complexity-everything-you-need-to-know-712254c178e4 [Accessed 29 Aug. 2024].
+
+‌
+
+## Q1 
 
 ### Bubble Sort - O(n^2)
 
-Bumble sort is a type of Sorting Algorithm, it compares each element with each other element, swapping them if needed to achieve an organised order. This process involves comparing adjacent elements and swapping them to ensure the larger elements "bubble up" to their correct positions, hence the name "Bubble Sort."
+Bubble Sort is a type of sorting algorithm. It compares each element with each other element, swapping them if needed to achieve an organised order. This process involves comparing adjacent elements and swapping them to ensure the larger elements "bubble up" to their correct positions, hence the name "Bubble Sort."
 
 Bubble Sort uses nested loops: an outer loop and an inner loop. Both loops have linear complexity, and when combined, this results in a quadratic complexity, represented as O(n²).
 
 Outer Loop: The outer loop runs through the list or array multiple times until the entire list is sorted. If the array has `n` elements, this loop typically runs `n-1` times.
-Inner Loop: The inner loop compares adjacent elements within the list. If the current element is greater than the next element, they get swapped, if the current element is smaller, nothing gets done and the loop continues. As the sorting progresses, larger elements gradually move towards their correct positions, and the number of iterations needed decreases.
 
-Bubble Sort algorithm is represented by O(n^2) Quadratic complexity in Big O notation. Big O notations always consider the worst case scenario. However, complexity notations can change depending if algorithm complexity increases or decreases. Bubble sort best case scenario occurs when array is sorted already and swapped flag is used, this will improve complexity from O(n^2) to O(n) - Linear complexity due to the outer loop running only once.
+Inner Loop: The inner loop compares adjacent elements. If the current element is greater than the next element, they are swapped; otherwise, if the current element is smaller, no action is taken and the loop continues. As the sorting progresses, larger elements gradually move to their correct positions, and the number of required iterations decreases.
 
-Considering the `Best case scenario` in Bubble Sort with the arr = [1, 2, 3, 4, 6, 33] and swap flag (Boolean value), the algorithm will improve to Linear complexity since the list is already ordered. The outer loop will run once, the inner loop will run `n - 1` times and the loop will exit after no swaps were performed. The total number of steps taken in this scenario is 5. 
+Bubble Sort algorithm is represented by O(n^2) Quadratic complexity in Big O notation. Big O notations always consider the worst case scenario. However, complexity notations can change depending if algorithm complexity increases or decreases. Bubble sort best case scenario occurs when array is sorted already and swap flag is used, this will improve the complexity from O(n^2) to O(n) - Linear complexity due to the outer loop running only once.
+
+Considering the best case scenario in Bubble Sort with the arr = [1, 2, 3, 4, 6, 33] and swap flag (Boolean value), the algorithm will improve to Linear complexity since the list is already ordered. The outer loop will run once, the inner loop will run "n - 1" times where n is equal to number of elements. The loop will exit after no swaps were performed. The total number of steps taken in this scenario is 5. 
 
 Quadratic complexity is usually found in algorithms that perform nested loops to compare elements, other algorithms that also has this type of complexity are Selection Sort and Insertion Sort.
 
-Quadratic has a very high complexity, and the reason for that is because the number of steps increases proportionally to the square of the input size. These algorithms performs operations and comparisons on each element against each other element in the list.
+Quadratic complexity is very high because the number of steps increases proportionally to the square of the input size. These Algorithms perform operations and comparisons on each element against each other element in the list.
 
-Some positive points about the Bubble Algorithm include being simple to understand and easy to implement. Due to it's simplicity it's great for educational purposes. It can be more suited to small and simple tasks rather then more complex algorithms. It's a stable algorithm which means it preserves the order of elements with equal values, this is crucial when sorting algorithm by multiple criteria. However, this algorithm becomes very inefficient when dealing with larger datasets due to the fact as the input increases, the complexity grows extremely fast.  
+Some positive aspects about the Bubble Algorithm include being simple to understand and easy to implement. It's straightforward and it makes a great option for educational purposes. It can be more suited to small and simple tasks rather than more complex functions. It is a stable algorithm, meaning it preserves the relative order of elements with equal values. This is crucial when sorting by multiple criteria, as it ensures that equal elements remain in their original order relative to each other. However, this algorithm becomes very inefficient when dealing with larger datasets because the complexity grows extremely fast as the input data grows.  
 
 
 ### Worse case scenario
@@ -257,51 +262,51 @@ In this scenario, the order is in inverse, which means the loops will interact o
     Pass 1:
     arr = [33, 6, 4, 3, 2, 1]
     Compare 33 and 6: Since 33 > 6, swap them.
-    List after swap: [6, 33, 4, 3, 2, 1]
+    New list: [6, 33, 4, 3, 2, 1]
     Compare 33 and 4: Since 33 > 4, swap them.
-    List after swap: [6, 4, 33, 3, 2, 1]
+    New list: [6, 4, 33, 3, 2, 1]
     Compare 33 and 3: Since 33 > 3, swap them.
-    List after swap: [6, 4, 3, 33, 2, 1]
+    New list: [6, 4, 3, 33, 2, 1]
     Compare 33 and 2: Since 33 > 2, swap them.
-    List after swap: [6, 4, 3, 2, 33, 1]
+    New list: [6, 4, 3, 2, 33, 1]
     Compare 33 and 1: Since 33 > 1, swap them.
-    List after swap: [6, 4, 3, 2, 1, 33]
+    New list: [6, 4, 3, 2, 1, 33]
     Result after Pass 1: [6, 4, 3, 2, 1, 33]
     The largest element, 33, has "bubbled" to its correct position at the end.
 
     Pass 2:
     Compare 6 and 4: Since 6 > 4, swap them.
-    List after swap: [4, 6, 3, 2, 1, 33]
+    New list: [4, 6, 3, 2, 1, 33]
     Compare 6 and 3: Since 6 > 3, swap them.
-    List after swap: [4, 3, 6, 2, 1, 33]
+    New list: [4, 3, 6, 2, 1, 33]
     Compare 6 and 2: Since 6 > 2, swap them.
-    List after swap: [4, 3, 2, 6, 1, 33]
+    New list: [4, 3, 2, 6, 1, 33]
     Compare 6 and 1: Since 6 > 1, swap them.
-    List after swap: [4, 3, 2, 1, 6, 33]
+    New list: [4, 3, 2, 1, 6, 33]
     Result after Pass 2: [4, 3, 2, 1, 6, 33]
     The second largest element, 6, is now in its correct position, just before 33.
 
     Pass 3:
     Compare 4 and 3: Since 4 > 3, swap them.
-    List after swap: [3, 4, 2, 1, 6, 33]
+    New list: [3, 4, 2, 1, 6, 33]
     Compare 4 and 2: Since 4 > 2, swap them.
-    List after swap: [3, 2, 4, 1, 6, 33]
+    New list: [3, 2, 4, 1, 6, 33]
     Compare 4 and 1: Since 4 > 1, swap them.
-    List after swap: [3, 2, 1, 4, 6, 33]
+    New list: [3, 2, 1, 4, 6, 33]
     Result after Pass 3: [3, 2, 1, 4, 6, 33]
     The third largest element, 4, is now in its correct position.
 
     Pass 4:
     Compare 3 and 2: Since 3 > 2, swap them.
-    List after swap: [2, 3, 1, 4, 6, 33]
+    New list: [2, 3, 1, 4, 6, 33]
     Compare 3 and 1: Since 3 > 1, swap them.
-    List after swap: [2, 1, 3, 4, 6, 33]
+    New list: [2, 1, 3, 4, 6, 33]
     Result after Pass 4: [2, 1, 3, 4, 6, 33]
     The fourth largest element, 3, is now in its correct position.
 
     Pass 5:
     Compare 2 and 1: Since 2 > 1, swap them.
-    List after swap: [1, 2, 3, 4, 6, 33]
+    New list: [1, 2, 3, 4, 6, 33]
     Result after Pass 5: [1, 2, 3, 4, 6, 33]
     The fifth largest element, 2, is now in its correct position.
 
@@ -355,11 +360,11 @@ Notes taken from ED/Canvas and past Zoom classes.
 GeeksforGeeks. (2014). Bubble Sort Algorithm. [online] Available at: https://www.geeksforgeeks.org/bubble-sort-algorithm/.
 
 
-# Q2
+## Q2
 
-## Merge Sort - O(n log n)
+### Merge Sort - O(n log n)
 
-Merge sort is a algorithm that follows the divide-and-conquer approach. When compared to the Bubble sorting algorithm example given in the question number 01 and other common sorting algorithms, Merge sort is more reliable and has a guaranteed worse case scenario of O(n log n). This complexity is achieve because the algorithm always divide the initial input data into halves. Some other advantages of Merge include being a stable algorithm and being easy to understand and implement.
+Merge sort is a divide-and-conquer algorithm. When compared to the Bubble sorting algorithm example given in the question number 01 and other common sorting algorithms, Merge sort is more reliable and has a guaranteed worse case scenario of O(n log n). This complexity is achieved because the Merge Algorithm always divide initial input data into halves. Some other advantages of Merge include being a stable algorithm and being easy to understand and implement.
 
 Merge works by dividing the array into two halves and sorting each half first. Once the halves are sorted, it merges halves back together. The initial order doesn't play a part in Merge sort.
 
